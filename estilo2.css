@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:bisque;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.header2 {
+    text-align: center;
+    margin-top: 20px;
+    color: crimson;
+
+}
+
+.texto-historia {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0%;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+
+}
+
+.botoesdejogo{
+    display: flex; 
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.botao-acao{
+   display: block;
+    margin : 30px ;
+    background-color: crimson; 
+    color: white;             
+    padding: 10px 20px;       
+    border: none;              
+    border-radius: 8px;        
+    cursor: pointer;           
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.botao-acao:hover {
+    background-color: rgb(250, 133, 156);
+    
+}
+
+.botaovoltardiv{
+     display: flex;
+     justify-content: center ;
+     align-items: center;
+     margin: 40px auto 0 auto;
+     
+}
+.botaovoltar{
+   display: block;
+    margin : 20px ;
+    background-color: crimson; 
+    color: white;             
+    padding: 8px 15px;       
+    border: none;              
+    border-radius: 8px;        
+    cursor: pointer;           
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 12px;
+    
+}
+.botaovoltar:hover{
+     background-color: rgb(250, 133, 156);
+}
+
+.tabela {
+    
+    margin: 1px auto 0 auto; 
+    width: 300px; 
+    border: 4px solid crimson; 
+    border-collapse: collapse; 
+ 
+}
+.tabela td {
+
+    border: 3px solid crimson; 
+    padding: 10px 20px; 
+    font-size: 1.1em;
+    text-align: center;
+}
+
+
+.tabela tr td:first-child {
+    text-align: center; 
+    text-transform: capitalize; 
+}

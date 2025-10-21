@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href =estilo2.css>
+</head>
+<body>
+  <div class = "header2">
+            <h1>  Sobrevivendo a 10 dias em uma ilha</h1>
+        </div>
+
+        <p class="texto-historia">
+            Você chegou ao seu primeiro dia na ilha. O sol está forte. Escolha sua primeira ação.
+        </p>
+
+    <div class="botoesdejogo">
+    <button class="botao-acao" onclick="tomarAcao('pescar')">
+    Pescar
+</button>
+
+<button class="botao-acao" onclick="tomarAcao('descansar')">
+    Descansar
+</button>
+
+<button class="botao-acao" onclick="tomarAcao('beber')">
+    Beber
+</button>
+<button class="botao-acao" onclick="tomarAcao('pedirajuda')">
+    Pedir ajuda
+</button>
+
+</div>
+    <table class="tabela">
+    <tr>
+        <td colspan="2">Status:</td>
+    </tr>
+    <tr>
+        <td>comida</td>
+        <td id="status-comida">5</td>   </tr>
+    <tr>
+        <td>água</td>
+        <td id="status-agua">5</td>     </tr>
+    <tr>
+        <td>energia</td>
+        <td id="status-energia">10</td>  </tr>
+    <tr>
+        <td>dias</td>
+        <td id="status-dias">0</td>      </tr>
+
+</table>
+<div class="botaovoltardiv">
+     <button class="botaovoltar" onclick="window.location.href='../paginaprincipal/index.html'">
+                Volte aqui
+            </button>
+</div>
+<script src="jogo.js"></script>
+</body>
+</html>

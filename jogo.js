@@ -4,7 +4,7 @@ let agua = 5;
 let energia = 10;
 let dias = 0;
 
-
+const header2 = document.querySelector('.header2');
 const textoHistoria = document.querySelector('.texto-historia');
 const botoesDeJogo = document.querySelector('.botoesdejogo');
 const statusComida = document.getElementById('status-comida');
@@ -36,18 +36,27 @@ function descansar() {
     
     if(sucesso){
         energia += 3; 
-        mensagem ="Você descansou à sombra de um coqueiro imaginário. (+4 Energia, -1 Custo)";
+        mensagem ="Você descansou à sombra de um coqueiro imaginário. (+4 Energia)";
     } else {
-        energia -= 2; 
-        mensagem ="Você tentou descansar, mas choveu a noite toda. (-3 Energia Total)";
+        energia -= 1; 
+        mensagem ="Você tentou descansar, mas choveu a noite toda. (-1 Energia Total)";
     }
     return mensagem;
 }
 
 function beber() {
+    let mensagem
     agua -= 1;
     energia += 1; 
-    return "Água salgada? Não era uma boa ideia… (-1 Água, +1 Energia)";
+    let sucesso=Math.random ()<0.5;
+    
+    if(sucesso){
+        agua +=3;
+        mensagem="Parabéns!Você avistou um coco e conseguiu extrair agua"
+    }else{
+    mensagem= "Água salgada? Não era uma boa ideia… (-1 Água, +1 Energia)";
+    }
+    return mensagem
 }
 
 function pedirAjuda() {
@@ -85,14 +94,14 @@ function verificarFimDeJogo() {
         
         atualizarStatusNaTabela();
         
-        textoHistoria.textContent = "FIM DE JOGO! Suas reservas acabaram. Você não sobreviveu...";
+        header2.textContent = "FIM DE JOGO! Suas reservas acabaram. Você não sobreviveu...";
         botoesDeJogo.style.display = 'none';
         return true;
     }
     
     
     if (dias >= 10) {
-        textoHistoria.textContent = "PARABÉNS! Você sobreviveu aos 10 dias da simulação! Você venceu!";
+       header2.textContent = "PARABÉNS! Você sobreviveu aos 10 dias da simulação! Você venceu!";
         botoesDeJogo.style.display = 'none';
         return true;
     }
